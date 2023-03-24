@@ -1,0 +1,114 @@
+@import url(https://fonts.google.com/specimen/Inter);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --very-dark-blue: 233, 47%, 7%;
+  --dark-blue: 244, 38%, 16%;
+  --soft-voilet: 277, 64%, 30%;
+  --white: 0, 0%, 100%;
+}
+.page {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: hsl(var(--very-dark-blue));
+  display: grid;
+  place-items: center;
+}
+.container {
+  height: 60vh;
+  width: 80vw;
+  background: hsl(var(--dark-blue));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.image {
+  position: relative;
+  overflow: hidden;
+  background: hsl(var(--soft-voilet));
+}
+
+.container .image img {
+  display: inline-block;
+  opacity: 0.6;
+  height: 100%;
+  width: 100%;
+}
+.content {
+  padding: 2em;
+}
+.content h2 {
+  color: white;
+  font-family: Lexend;
+  font-size: 2.5em;
+}
+.content span {
+  color: hsl(var(--soft-voilet));
+}
+.content .description {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 14px;
+  margin-top: 1em;
+}
+.bottom-row {
+  font-family: sans-serif;
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+}
+.bottom-row .desc {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 12px;
+}
+@media only screen and (max-width: 763px) {
+  .content h2 {
+    font-size: 2em;
+  }
+}
+@media only screen and (max-width: 645px) {
+  .container {
+    height: 85vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+  .container .image {
+    order: 1;
+  }
+  .container .content {
+    order: 2;
+  }
+  .content h2 {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .content p {
+    text-align: center;
+  }
+  .bottom-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5em;
+  }
+  .bottom-row h3 {
+    font-size: 1em;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 644px) {
+  .content h2 {
+    font-family: sans-serif;
+    font-size: 2em;
+    text-align: center;
+  }
+  .bottom-row {
+    gap: 1em;
+  }
+}
