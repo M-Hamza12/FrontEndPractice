@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.gridy {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+.white {
+  color: white;
+}
+.bgWhite {
+  background-color: white;
+}
